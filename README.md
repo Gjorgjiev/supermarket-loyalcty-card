@@ -68,7 +68,7 @@ Controllers:
            "mobileNumber": "654789",
            "userCardNumber": "6541587456987",
            "euros": 290.0,
-           "purchasePoints": -150,
+           "purchasePoints": 150,
            "timestamp": "2021-12-24T23:06:58.363",
            "user": {
                      "id": 11,
