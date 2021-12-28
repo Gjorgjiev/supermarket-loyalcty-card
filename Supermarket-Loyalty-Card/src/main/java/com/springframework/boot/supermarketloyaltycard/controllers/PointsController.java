@@ -10,6 +10,16 @@ import com.springframework.boot.supermarketloyaltycard.models.Transactions;
 import com.springframework.boot.supermarketloyaltycard.models.User;
 import com.springframework.boot.supermarketloyaltycard.services.PointsService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+
+@Tag(name = "Sql-Controller", description = "Endpoints for adding points to user account and option for a discount or a packet of water")
+@ApiResponses(value = {
+    @ApiResponse(responseCode = "200", description = "Retrieve data in JSON format from the specified database", content = {
+        @Content(mediaType = "application/json") }),
+    @ApiResponse(responseCode = "500", description = "Internal server error: Unable to acquire connection. The server encountered an unexpected condition that prevented it from fullfilling the request.") })
 @RestController
 public class PointsController {
 
